@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The SSO Tax, Explained (and a Cheaper Way Out)</title>
+<meta name="description" content="Auth0, Okta, and friends charge a 300-700% premium just to turn on SSO. We're exploring a cheaper path for mid-market SaaS teams. Tell us your SSO tax story.">
+<style>
+  :root {
+    --ink: #111318;
+    --paper: #fbfaf7;
+    --accent: #c8432c;
+    --muted: #5b5f6b;
+    --line: #e4e1da;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    background: var(--paper);
+    color: var(--ink);
+    line-height: 1.55;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 0 24px; }
+  header { padding: 72px 0 24px; }
+  .kicker {
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 13px;
+    color: var(--accent);
+    font-weight: 600;
+    margin-bottom: 16px;
+  }
+  h1 { font-size: 40px; line-height: 1.15; margin: 0 0 20px; letter-spacing: -0.01em; }
+  .sub { font-size: 19px; color: var(--muted); margin: 0 0 8px; max-width: 60ch; }
+  section { padding: 32px 0; border-top: 1px solid var(--line); }
+  h2 { font-size: 22px; margin: 0 0 16px; }
+  .stat-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 16px;
+    margin: 20px 0;
+  }
+  .stat {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 16px;
+  }
+  .stat .n { font-size: 24px; font-weight: 700; color: var(--accent); }
+  .stat .d { font-size: 13px; color: var(--muted); margin-top: 4px; }
+  .quote {
+    border-left: 3px solid var(--accent);
+    padding: 4px 0 4px 20px;
+    color: var(--muted);
+    font-style: italic;
+    margin: 20px 0;
+  }
+  .cta-box {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 28px;
+    margin: 20px 0;
+  }
+  .cta-box h2 { margin-top: 0; }
+  .cta-list { padding-left: 20px; margin: 16px 0; }
+  .cta-list li { margin-bottom: 10px; }
+  .btn {
+    display: inline-block;
+    background: var(--ink);
+    color: #fff;
+    text-decoration: none;
+    padding: 12px 22px;
+    border-radius: 8px;
+    font-weight: 600;
+    margin-top: 8px;
+  }
+  .note { font-size: 13px; color: var(--muted); margin-top: 14px; }
+  footer { padding: 40px 0 80px; color: var(--muted); font-size: 13px; }
+  a { color: var(--accent); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="kicker">Early-stage research &mdash; not a live product yet</div>
+    <h1>You already build SAML. Auth0 wants 400%+ more to let your customers turn it on.</h1>
+    <p class="sub">If you're a mid-market B2B SaaS team who just landed your first enterprise deal, you've probably run into the "SSO tax" &mdash; the moment your auth vendor gates single sign-on behind their most expensive plan, right when a real customer is asking for it.</p>
+  </header>
+
+  <section>
+    <h2>This isn't a one-off complaint</h2>
+    <p>The "SSO tax" is a named, community-documented pattern that's been called out for years &mdash; not something we're inventing to sell you a fix.</p>
+    <div class="stat-grid">
+      <div class="stat"><div class="n">+7,828%</div><div class="d">HubSpot SSO upcharge cited by frustrated buyers ($46 &rarr; $3,647/mo)</div></div>
+      <div class="stat"><div class="n">+425%</div><div class="d">GitHub SAML add-on ($4 &rarr; $21/user/mo)</div></div>
+      <div class="stat"><div class="n">6+ yrs</div><div class="d">Hacker News has re-litigated this every year or two since 2020</div></div>
+    </div>
+    <p class="quote">"sso.tax" maintains a public "Wall of Shame" of vendors that gate SSO behind a &gt;10% price premium &mdash; and a "Friends of SSO" list of vendors that don't.</p>
+  </section>
+
+  <section>
+    <h2>What we're exploring</h2>
+    <p>A lighter-weight way for mid-market SaaS teams to offer SSO to their own customers &mdash; without eating (or passing along) the usual enterprise-identity-vendor markup. We haven't built a finished product yet. Before we do, we want to talk to people who've actually lived this.</p>
+  </section>
+
+  <div class="cta-box">
+    <h2>Have you eaten an SSO tax, or had to explain one to a customer?</h2>
+    <p>We're doing a handful of short conversations (15&ndash;20 min, async written replies also welcome) with people who own auth/identity decisions at a B2B SaaS company. No pitch &mdash; we want to hear what actually happened: which vendor, what it cost, what you did about it.</p>
+    <ul class="cta-list">
+      <li>Tell us your story in the comments wherever you found this link, or</li>
+      <li>Reply to the post that pointed you here &mdash; we're reading every response.</li>
+    </ul>
+    <p class="note">We're not collecting payment or scheduling info here yet &mdash; this page exists to gather real stories before we build anything.</p>
+  </div>
+
+  <footer>
+    <p>&copy; 2026 &mdash; early-stage research project. Not affiliated with Auth0, Okta, WorkOS, Clerk, HubSpot, or GitHub. Figures above are third-party numbers commonly cited in public discussions (Hacker News, sso.tax) and have not been independently verified by us.</p>
+  </footer>
+</div>
+</body>
+</html>
